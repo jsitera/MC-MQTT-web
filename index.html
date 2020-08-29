@@ -1,0 +1,112 @@
+ <!DOCTYPE html>
+<html>
+<title>ESPcraft</title>
+<head>
+<style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #088a33;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 18px #065e23;
+  font-weight: bold;
+}
+
+.button:hover {background-color: #08782d}
+.button2 {width: 20%; height: 50%;}
+.button:active {
+  background-color: #08782d;
+  box-shadow: 0 11px #065e23;
+  transform: translateY(8px);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.center2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+input[type=text] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+select {
+  width: 20%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+<div class="center2">
+</div>
+<div class="center2">
+<p>Please enter a message.</p>
+</div>
+<div class="center2">
+<input type="text" id="myMessageToSend" value="">
+</div>
+<div class="center2">
+<p>Please select a color.</p>
+</div>
+<div class="center2">
+<select id="color" name="color">
+<option value="black">Black</option>
+<option value="dark_blue">Dark Blue</option>
+<option value="dark_green">Dark Green</option>
+<option value="dark_aqua">Dark Aqua</option>
+<option value="dark_red">Dark Red</option>
+<option value="dark_purple">Dark Purple</option>
+<option value="gold">Gold</option>
+<option value="gray">Gray</option>
+<option value="dark_gray">Dark Gray</option>
+<option value="blue">Blue</option>
+<option value="green">Green</option>
+<option value="aqua">Aqua</option>
+<option value="red">Red</option>
+<option value="light_purple">Purple</option>
+<option value="yellow">Yellow</option>
+<option value="white">White</option>
+</select>
+</div>
+<div class="center2">
+</div>
+<div class="center">
+<button class="button button2" onClick="mySendMessage()">Send Message</button>
+</select>
+</div>
+<!-- import jquery library -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <!-- import paho MQTT library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+
+    <!-- javascript MC-MQTT-web-client procedures -->
+    <script src="MC-MQTT-web.js"></script>
+
+</body>
+</html> 
